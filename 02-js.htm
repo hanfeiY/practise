@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num = 1
+        // // num *= 3
+        // // num = ++num 
+        
+        // console.log(1 >= '1');
+        // console.log(1 !== '1');
+
+        // let num = +prompt('请输入一个数')
+        // if(num%4 === 0 && num%100 !== 0){
+        //     document.write(true)
+        // }else{
+        //     document.write(false)
+        // }
+        // let uname = prompt('请输入用户名:')
+        // let password = prompt('请输入密码:')
+        // if(uname === 'pink' && password==='123456'){
+        //     alert('登录成功')
+        // }else{
+        //     alert('对不起，用户名或者密码错误')
+        // }
+
+        // let year = prompt('请输入年份:')
+        // if(year%4===0 && year%100!==0 || year%400===0){
+        //     alert(`${year}年是闰年`)
+        // }else{
+        //     alert(`${year}年是平年`)
+        // }
+
+        // let num = +prompt('请输入成绩')
+        // if(num>=90){
+        //     alert('优秀')
+        // }else if(num>=70){
+        //     alert('良好')
+        // }else if(num>=60){
+        //     alert('及格')
+        // }else{
+        //     alert('不及格')
+        // }
+        
+        // let num1 = +prompt('请输入第一个值:')
+        // let num2 = +prompt('请输入第二个值:')
+        // // num1>num2?alert(`${num1}是最大的数`):alert(`${num2}是最大的数`)
+        // alert(`最大的数是${num1>num2?num1:num2}`)
+
+        let num1 = +prompt('请输入第一个数:')
+        let ab = prompt('请输入运算符+ - * /其中一个')
+        let num2 = +prompt('请输入第二个数:')
+        // alert(`这个数是${num<10?'0'+num:num}`)
+
+        switch(ab){
+            case '+':
+                alert(`这个数是${num1+num2}`)
+                break
+            case '-':
+                alert(`这个数是${num1-num2}`)
+                break
+            case '*':
+                alert(`这个数是${num1*num2}`)
+                break
+            default:
+                alert(`这个数是${num1/num2}`)
+        }
+    </script>
+</body>
+</html>

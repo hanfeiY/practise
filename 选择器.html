@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div,
+      p,
+      ul {
+        color: rgb(255, 0, 0);
+        /* 转换为行内元素 */
+        display: inline;
+      }
+      a:link {
+        color: rgba(0, 0, 0, 0.76);
+        text-decoration: none;
+        width: 150px;
+        height: 50px;
+        /* 转换为块级元素 */
+        display: block;
+        background-color: #ccc;
+      }
+
+      /* 已经点击过的链接的颜色 */
+      a:visited {
+        color: orange;
+      }
+
+      a:hover {
+        color: pink;
+        text-decoration: underline;
+      }
+      /* 点住链接不动时的颜色 */
+      a:active {
+        color: green;
+      }
+      input:focus {
+        background-color: #ccc;
+        color: aquamarine;
+        /* 转换为行内块元素 */
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul>
+      <a href="#">粉红猪一家</a>
+      <a href="www.xxxx.com">粉红猪家</a>
+      <li>粉红猪</li>
+      <li>🐖爸</li>
+      <li>🐖妈</li>
+    </ul>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+</html>

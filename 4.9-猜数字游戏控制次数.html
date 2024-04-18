@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sum()">开始猜数字游戏</button>
+    <button onclick="getRandomColor(flag)">随机颜色</button>
+    <div></div>
+    <script>
+        function sum(){
+            function getRandom(N,M){
+            return Math.floor(Math.random()*(M-N+1)+N)
+            }
+            let random = getRandom(1,10)
+            let flag = true
+            for(let i = 1;i<=3;i++){
+                let sum = +prompt('请输入一个数字')
+                if(sum>random){
+                    alert('猜大了')
+                }else if(sum<random){
+                    alert('猜小了')
+                }else{
+                    flag = false
+                    alert('恭喜你猜对了')
+                    break
+                }
+            }
+            if(flag){
+                alert('很遗憾，没有猜出来，次数用完了。')
+            }
+        }
+        function sub(){
+            
+            // function getRandom(){
+            //     return Math.floor(Math.random()*arr.length)
+            // }
+            // let random = getRandom()
+            // let random = []
+            // for(let i = 1;i<=6;i++){
+            //     random[i] = arr[Math.floor(Math.random()*arr.length)]
+            //     return random[i]
+            // }
+            // console.log(random);
+            
+        }
+        function getRandomColor(flag){
+                if(flag){
+                    let str = '#'
+                    let arr = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+                    for(let i = 1;i<=6;i++){
+                        let sum = arr[Math.floor(Math.random()*arr.length)]
+                        str += sum
+                    }
+                    return str
+                }else{
+                    let r = Math.floor(Math.random()*256)
+                    let g = Math.floor(Math.random()*256)
+                    let b = Math.floor(Math.random()*256)
+                    return `rgb(${r},${g},${b})`
+                }
+            }
+            let newArr = [true,false]
+            let Sum = newArr[Math.floor(Math.random()*newArr.length)]
+            document.write(getRandomColor(Sum))
+            const div = document.querySelector('div')
+            div.style.backgroundColor=getRandomColor(Sum)
+    </script>
+</body>
+</html>

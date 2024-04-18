@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="He()">计算两个数之和</button>
+    <button onclick="Cheng(1,100)">计算1-100之间所有数的和</button>
+    <button onclick="Cheng(100,101)">计算101和100的和</button>
+    <script>
+        // function sayhi(){
+        //     document.write('你好')
+        // }
+        // sayhi()
+        function He(){
+            let a = +prompt(`请输入第一个数:`)
+            let b = +prompt(`请输入第二个数:`)
+            document.write(`这两个数之和为${a+b}`)
+        }
+        function Cheng(start,end){
+            let sum = 0
+            for(let i = start;i<end+1;i++){
+                sum += i
+            }
+            document.write(`1-100之间所有数的和为${sum}`)
+        }
+
+        let arr = [3,2,5,9,7,1,8,6]
+        for(let i = 0;i<arr.length-1;i++){
+            for(let j = 0;j<arr.length-i-1;j++){
+                if(arr[j]>arr[j+1]){
+                    let temp = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = temp
+                }
+            }
+        }
+        document.write(arr)
+        
+        // console.log(arr)
+        // let arr = [3,2,5,4,7,6,1,8]
+        // for(let i = 0;i<arr.length-1;i++){
+        //     for(let j = 0;j<arr.length-i-1;j++){
+        //         if(arr[j]>arr[j+1]){
+        //             let temp = arr[j]
+        //             arr[j] = arr[j+1]
+        //             arr[j+1] = temp
+                    
+        //         }
+        //     }
+        // }
+        // document.write(arr)
+        function getSum(arr=[]){
+            let sum = 0
+            for(let i = 0;i<arr.length;i++){
+                sum += arr[i]
+            }
+            document.write(`这个数组和是${sum}`)
+        }
+        getSum([1,2,3,4,5])
+    </script>
+    
+</body>
+</html>

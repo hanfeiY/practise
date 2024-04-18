@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sum()">点击按钮，选择武将</button>
+    <h2>学生信息</h2>
+    <p>将数据渲染到页面中</p>
+    <table>
+        <caption>学生列表</caption>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>籍贯</th>
+        </tr>
+        <script>
+            let students = [
+                {name:'小明',age:18,gender:'男',hometown:'河北省'},
+                {name:'小红',age:19,gender:'女',hometown:'河北省'},
+                {name:'小刚',age:17,gender:'男',hometown:'四川省'},
+                {name:'小丽',age:18,gender:'女',hometown:'四川省'},
+            ]
+            students.push({name:'小王',age:18,gender:'男',hometown:'山东省'})
+            for(let i = 0;i<students.length;i++){
+                document.write(`
+                <tr>
+                    <th>${i+1}</th>
+                    <th>${students[i].name}</th>
+                    <th>${students[i].gender}</th>
+                    <th>${students[i].age}</th>
+                    <th>${students[i].hometown}</th>
+                </tr>
+                `)
+            }
+            // console.log(Math.ceil(1.1));
+            // console.log(Math.ceil(1.5));
+            // console.log(Math.floor(1.1));
+            // console.log(Math.floor(1.9));
+            // console.log(Math.round(1.1));
+            // console.log(Math.round(1.5));
+            
+            // console.log(Math.floor(Math.random()*(5+1)+5));
+            // let arr = ['小张','小黄','小王']
+            // let random = Math.floor(Math.random()*arr.length)
+            // console.log(arr[random]);
+
+            // function getRandom(N,M){
+            //     return Math.floor(Math.random()*(M-N+1)+N)
+            // }
+            // console.log(getRandom(4,8));
+            
+            function sum(){
+                let arr = ['赵云','黄忠','关羽','马超','刘备','张飞','曹操']
+                let random = Math.floor(Math.random()*arr.length)
+                document.write(arr[random])
+                arr.splice(random,1)
+                console.log(arr);
+            }
+        </script>
+    </table>
+    <script>
+        let sub = Math.floor(Math.random()*10+1)
+        while(true){
+            let sum = +prompt('请输入一个1到10之间的数')
+            if(sum>sub){    
+                alert('数字猜大了')
+            }else if(sum<sub){
+                alert('数字猜小了')
+            }else{
+                alert('猜对了')
+                break 
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+<!-- // while(true){
+    //     let sum = prompt('你爱钱吗')
+    //     if(sum === '爱'){
+    //         alert('明智的选择')
+    //         break
+    //     }
+    // }
+    // let second = +prompt(`请输入秒数:`)
+    // function fun(Second){
+    //     let h = parseInt(Second/60/60%24)
+    //     let m = parseInt(Second/60%60)
+    //     let s = parseInt(Second%50)
+    //     if(h<10){
+    //         h='0'+ parseInt(Second/60/60%24)
+    //     }
+    //     if(m<10){
+    //         m = '0' + parseInt(Second/60%60)
+    //     }
+    //     if(s<10){
+    //         s = '0' + parseInt(Second%60)
+    //     }
+    //     document.write(`这个时间为${h}时${m}分${s}秒`)
+    // }
+    // fun(second)
+
+        // 增加年龄
+    // let age = +prompt('请输入年龄:')
+    // alert(`据我所知，五年后，你可能${age+5}岁了`)
+
+        // 用户登录验证
+    // let uname = ''
+    // let age = 0
+    // while(true){
+    //      let uname = prompt('请输入用户名:')
+    //      let age = +prompt('请输入年龄:')
+    //      if(uname==='admin'&&age===123456){
+    //         alert('登录成功')
+    //      }else{
+    //         alert('用户名或者密码错误！')
+    //      }
+    //      break
+    // }
+    
+        //用户输入一个数，计算1到这个数的和
+    // let sum = 0
+    // let j = +prompt('请输入一个数:')
+    // for(let i = 1;i<j+1;i++){
+    //     sum += i
+    // }
+    // document.write(`1到${j}的和为:${sum}`)
+
+    // let arr = [4,9,5,3,20,6,15,11]
+    // let max = [0]
+    // for(let i = 0;i<arr.length;i++){
+    //     if(max<arr[i]){
+    //         max = arr[i]
+    //     }       }
+    // document.write(`数组里面最大的数为:${max}`)
+
+    // let goods = {
+    //     uname:'牙刷',
+    //     num:'100012816024',
+    //     weight:'0.01kg',
+    //     address:'中国大陆',
+    //     fun:function(x,y){
+    //         console.log(x+y);
+    //     }
+    // }
+    // goods.uname='毛巾'
+    // goods.height='100cm'
+    // console.log(goods);
+    // console.log(goods['uname']);
+    // console.log(goods['num']);
+    // console.log(goods['weight']);
+    // console.log(goods['address']);
+    // console.log(goods['height']);
+    // document.write(`这个产品的名称是${goods.uname}<br>,
+    // 编号是${goods.num}<br>,
+    // 重量是${goods.weight}<br>,
+    // 产地是${goods.address}
+    // `)
+    // goods.fun(1,2)
+    // for(let k in goods){
+    //     console.log(k);
+    //     console.log(goods[k]);
+    // }
+    
+    
+    // for(let i=0;i<students.length;i++){
+    //     console.log(students[i]);
+    //     console.log(students[i].name);  
+    // }
+    // document.write(``) -->

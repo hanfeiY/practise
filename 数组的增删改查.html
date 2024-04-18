@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            width: 700px;
+            height: 500px;
+            border-left: 1px solid pink;
+            border-bottom: 1px solid pink;
+            margin: 50px auto;
+            justify-content: space-around;
+            align-items: flex-end;
+            text-align: center;
+        }
+        .box>div{
+            display: flex;
+            width: 50px;
+            background-color: pink;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .box div span{
+            margin-top: -20px;
+        }
+        .box div h4{
+            width: 70px;
+            margin-left: -10px;
+            margin-bottom: -35px;
+        }
+    </style>
+</head>
+<body>
+    
+        
+        
+    
+    <script>
+        // let arr = ['迪丽热巴','貂蝉','西施']
+        // //加在数组的末尾
+        // arr.push('张三')
+        // //加在数组的开头
+        // arr.unshift('李四')
+        // for(let i = 0; i<arr.length; i++){
+        //     // arr[i] = arr[i]+'老师'
+        //     // document.write(arr[i])
+            
+        //     arr[i] += '老师'
+        // }
+        
+        // document.write(arr)
+
+        // let arr = [2,0,6,1,77,4,52,3,25,7]
+        // let newarr = []
+        // for(let i = 0;i<arr.length;i++){
+        //     if(arr[i] >= 10){
+        //         newarr.push(arr[i])
+        //     }
+        // }
+        // document.write(newarr)
+
+        // let arr = [2,0,6,0,77,0,52,0,25,7]
+        // let newarr = []
+        // for(let i = 0;i<arr.length;i++){
+        //     if(arr[i] !== 0){
+        //         newarr.push(arr[i])
+        //     }
+        // }
+        // document.write(newarr)
+
+        // let arr = ['张三','李四','王五','张麻子']
+        // //删除数组最后一个元素
+        // arr.pop()
+        // //删除数组第一个元素
+        // arr.shift()
+        // arr.unshift('张三')
+        // arr.push('王麻子')
+        // arr.splice(1,1)
+        // document.write(arr)
+        // let newarr = []
+        // for(let i =1;i<=4;i++){
+        //    newarr.push(prompt(`请输入第${i}季度的数据:`)) 
+        // }
+        // //盒子开头
+        // document.write(`<div class="box">`)
+        // //盒子中间
+        // for(let i = 0;i<newarr.length;i++){
+        //     document.write(`
+        //     <div style="height: ${newarr[i]}px;">
+        //     <span>${newarr[i]}</span>
+        //     <h4>第${i+1}季度</h4>
+        //     </div>
+        //     `)
+        // }
+        // //盒子结尾
+        // document.write(`</div>`)
+
+        // let arr = []
+        // for(let i = 1;i<=4;i++){
+        //     arr.push(prompt(`请输入第${i}季度的数据:`))
+        // }
+        // document.write(`<div class = "box">`)
+        // for(let i = 0;i<arr.length;i++){
+        //     document.write(`
+        //         <div style="height:${arr[i]}px;">
+        //             <span>${arr[i]}</span>
+        //             <h4>${i+1}</h4>
+        //         </div>
+        //     `)
+        // }
+        // document.write(`</div>`)
+
+        // let arr = [3,2,5,4,7,6,1,8]
+        // for(let i = 0;i<arr.length-1;i++){
+        //     for(let j = 0;j<arr.length-i-1;j++){
+        //         if(arr[j]>arr[j+1]){
+        //             let temp = arr[j]
+        //             arr[j] = arr[j+1]
+        //             arr[j+1] = temp
+                    
+        //         }
+        //     }
+        // }
+        // document.write(arr)
+
+        let arr = []
+        for(let i = 0;i<5;i++){
+            let sum = +prompt(`请输入年龄:`)
+            if(sum>=0 && sum<=100){
+                arr.push(sum)
+            }else{
+                alert('无效年龄，请重输')
+                let sum = +prompt(`请输入年龄:`)
+                arr.push(sum)
+            }
+        }
+        let sub = 0//累加年龄
+        let max = arr[0]
+        let min = arr[0]
+        for(let j = 0;j<arr.length;j++){
+            sub += arr[j]
+            if(max<arr[j]){
+                max = arr[j]
+            }
+            if(min>arr[j]){
+                min = arr[j]
+            }
+        }
+        document.write(`${arr}<br>`)
+        document.write(`平均年龄为:${sub/arr.length}<br>`)
+        document.write(`最大值为:${max}<br>`)
+        document.write(`最小值为:${min}<br>`)
+        document.write(`累加年龄为:${sub}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+            padding: 5px 5px;
+            width: 60px;
+            border: 1px solid #ccc;
+            margin: 3px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px 2px pink;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // for(let i = 1;i<4;i++){
+        //     document.write(`第${i}天<br>`)
+        //     for(let n = 1;n<6;n++){
+        //         document.write(`今天的第${n}个单词<br>`)
+        //     }
+        // }
+        // let cow = +prompt('请输入打印的行数:')
+        // let col = +prompt('请输入打印的列数:')
+        // for(let i = 1;i<=cow;i++){
+        //     for(let n = 1;n<=col;n++){
+        //         document.write(`⭐`)
+        //     }
+        //     document.write('<br>')
+        // }
+        // for(let i = 1;i<=9;i++){
+        //     for(let n = 1;n<=i;n++){
+        //         document.write(`<span>${n}✖${i}=${i*n}</span>`)
+        //     }
+        //     document.write('<br>')
+        // }
+        // let arr = [1,2,3,4,5,6,7]
+        // for(let i = 0;i<arr.length;i++){
+        //     arr[min] = arr[0]
+        //     arr[max] = arr[length-1]
+        //     document.write(arr[min],arr[max])
+        // }
+
+        // let arr = [2,6,1,7,4]
+        // let j = 0
+        // for(let i = 0;i<arr.length;i++){
+        //     j += arr[i]
+        // }
+        // document.write(`所有元素的和为${j}`)
+        // document.write(`平均值为${j/arr.length}`)
+        let arr = [2,6,1,7,4]
+        let max = arr[0]
+        let min = arr[0]
+        for(let i = 0;i<arr.length;i++){
+            // if(max<arr[i]){
+            //     max = arr[i]
+            // }
+            max < arr[i]?max=arr[i]:max
+            
+            if(min>arr[i]){
+                min = arr[i]
+            }  
+        }
+        document.write(`最大值为${max}`)
+        document.write(`最小值为${min}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        table{
+            margin: 0 auto;
+            height: 80px;
+            border-collapse: collapse;
+            
+        }
+        th{
+            border: 1px solid #000;
+            padding: 10px 20px;
+        }
+        td{
+            text-align: center;
+            border: 1px solid #000;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>订单确认</h2>
+    
+    <!-- <button onclick="alert('你好 JS~')">点击我，发大财！</button> -->
+    <br>
+    <script>
+        // document.write('JavaSCript 我来了')
+        // let uname = prompt('请输入')
+        // document.write(uname)
+
+        // let num1=10
+        // let num2=20
+        // let temp
+        // temp=num1
+        // num1=num2
+        // num2=temp
+        // document.write(num1,num2)
+        // console.log(num1,num2);
+
+        // let uname = prompt('请输入你的名字')
+        // let age = prompt('请输入你的年龄')
+        // let gender = prompt('请输入你的性别')
+        // document.write(uname,age,gender)
+
+        // let arr=['星期一','星期二','星期三','星期四','星期五','星期六','星期日']
+        // document.write(arr[6])
+
+        // let r = prompt('请输入圆的半径')
+        // let S = 3.14*r*r
+        // document.write(S)
+        // let name = prompt('请输入你的名字')
+        // let age = prompt('请输入你的年龄')
+        // document.write(`我叫${name},今年${age}岁了`)
+
+        // let num1 = Number(prompt('请输入第一个数：'))
+        // let num2 = Number(prompt('请输入第二个数：'))
+        // let num3 = num1+num2
+        // alert(`两数相加为${num1+num2}`)
+
+        // let title = prompt('请输入商品名称')
+        // let price = +prompt('请输入商品价格')
+        // let num = +prompt('请输入商品数量')
+        // let where = prompt('请输入收货地址')
+
+        // document.write(`
+        // <table>
+        // <tr>
+        //     <th>商品名称</th>
+        //     <th>商品价格</th>
+        //     <th>商品数量</th>
+        //     <th>商品总价</th>
+        //     <th>收货地址</th>
+        // </tr>
+        // <tr>
+        //     <td>${title}</td>
+        //     <td>${price}</td>
+        //     <td>${num}</td>
+        //     <td>${price*num}</td>
+        //     <td>${where}</td>
+        // </tr>
+        // </table>
+        // `)
+        let total = +prompt('请输入银行卡总额')
+        let shui = +prompt('请输入水费')
+        let dian = +prompt('请输入电费')
+        let wang = +prompt('请输入网费')
+        let price = total-dian-shui-wang
+
+        document.write(`
+        <table>
+        <tr>
+            <th>银行卡总额</th>
+            <th>水费</th>
+            <th>电费</th>
+            <th>网费</th>
+            <th>银行卡余额</th>
+        </tr>
+        <tr>
+            <td>${total}</td>
+            <td>${shui}</td>
+            <td>${dian}</td>
+            <td>${wang}</td>
+            <td>${price}</td>
+        </tr>
+        </table>
+        `)
+    </script>
+</body>
+</html>

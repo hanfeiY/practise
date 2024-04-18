@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* * {
+            color: red;
+        } */
+        
+        .pink {
+            color: red;
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+        }
+        #pink {
+            color: pink;
+        }
+        .red {
+            font-size: 20px;
+        }
+        ul li {
+            color: red;
+        }
+        ol li {
+            /* color: red; */
+            font-weight: bold;
+            font-family: '微软雅黑';
+            font-style: italic;
+        }
+        h1 {
+            /* font-weight: 400; */
+            font-weight: normal;
+            font-family: '宋体';
+        }
+        body {
+            font-size: 16px;
+            font-family:'Courier New', Courier, monospace;
+        }
+        /* em {
+            font-style: normal;
+        } */
+        .san {
+            /* font:font-style font-weight font-size/line-height font-fanmily */
+            /* font-style font-weight line-height都可以省略 font-size和font-family必须要有 */
+            font: italic 700 20px 'Mircosoft yahei';
+            text-align: center;
+        }
+        h4 {
+            /* 删除线 */
+            text-decoration: line-through;
+            /* 下划线 */
+            /* text-decoration: underline; */
+            /* 上划线 */
+            /* text-decoration: overline; */
+            text-align: center;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+            color: deeppink;
+        }
+        a {
+            text-decoration: none;
+        }
+        p {
+            /* 文本的第一行缩进 */
+            /* text-indent: 20px; */
+
+            /* em是一个相对单位，就是当前元素(font-size)1个文字的大小，
+            如果当前元素没有设置大小，则会按照父元素的1个文字大小 */
+            font-size: 20px;
+            text-indent: 2em;
+            /* 行间距 */
+            line-height: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div>我是div</div>
+    <div class="pink red">我是div</div>
+    <div>我是div</div>
+    <h1 id="pink">我是段落</h1>
+    <p id="pink">我是段落</p>
+    <p id="pink">我是段落</p>
+    <p>我是段落</p>
+    <ul>
+        <li>我是ul里面的li</li>
+    </ul>
+    <ol>
+        <li>我是ol里面的li</li>
+    </ol>
+    <em>倾斜的你</em>
+    <P class="san">三生三世，十里桃花。</P>
+    <h4>粉色的回忆</h4>
+    <a href="#">粉色的回忆</a>
+</body>
+</html>
